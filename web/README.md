@@ -1,4 +1,4 @@
-# OnTheRecord web
+# ClaudeVibeCodeAppTemplate web
 
 React 19 + TypeScript + Vite + Tailwind. See the [project README](../README.md) for setup.
 

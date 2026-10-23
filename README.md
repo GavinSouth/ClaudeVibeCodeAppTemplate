@@ -1,11 +1,19 @@
-# OnTheRecord
+# ClaudeVibeCodeAppTemplate
 
-Purpose TBD (ROADMAP F1.2).
+A boilerplate for starting a new app idea with Claude Code: a Python backend, a React web app, an iOS placeholder, CI, and project-management docs (ROADMAP, HISTORY context log, ARCHITECTURE) that carry context between sessions.
+
+## Using this template
+1. Copy the repo (GitHub "Use this template", or clone and re-init git).
+2. Open Claude Code in the repo root. It sees the `ClaudeVibeCodeAppTemplate` marker and runs `/new-app`. You can also run `/new-app` yourself.
+3. Answer the getting-started questions: name, pitch, users, core actions, data, scope, clients, accounts, storage, pace.
+4. Claude renames the project, prunes unused clients, rewrites the docs for your app, runs checks, and commits.
+
+Full guide, including what each markdown file is for: [docs/TEMPLATE.md](docs/TEMPLATE.md).
 
 **Status:** scaffold only (F1.1). A Python backend package, a React web shell, and an iOS placeholder, with linting, type checks, tests, and CI wired up. See [ROADMAP.md](ROADMAP.md) and [docs/](docs/).
 
 ## Architecture (planned)
-- **Backend** (`backend/`): Python 3.13 HTTP API and database (framework and storage chosen in F1.2).
+- **Backend** (`backend/`): Python 3.13 HTTP API and database (framework and storage chosen in product & data design, F1.3).
 - **Web app** (`web/`): React + TypeScript + Vite + Tailwind.
 - **iOS** (`ios/`): SwiftUI app on the same API.
 
@@ -50,11 +58,11 @@ npm run lint && npm run typecheck && npm test && npm run build   # all checks
 
 ## Project layout
 ```
-backend/            Python package (src/ontherecord), tests/
+backend/            Python package (src/claudevibecodeapptemplate), tests/
 web/                React app (src/)
 ios/                SwiftUI app (placeholder)
-docs/               ARCHITECTURE.md (decisions), HISTORY_P<phase>.md (context log per phase), python_research.md (tooling notes)
+docs/               TEMPLATE.md (template guide), ARCHITECTURE.md (decisions), HISTORY_P<phase>.md (context log per phase), python_research.md (tooling notes)
 .github/workflows/  CI
-.claude/            Claude Code settings + /finish-feature skill
+.claude/            Claude Code settings + /new-app and /finish-feature skills
 .gitignore          secrets (.env), venvs, caches, Xcode, OS/editor files
 ```

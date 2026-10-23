@@ -2,13 +2,13 @@
 
 import pytest
 
-import ontherecord
+import claudevibecodeapptemplate
 
 
 def test_package_imports() -> None:
-    assert ontherecord.__version__ == "0.1.0"
+    assert claudevibecodeapptemplate.__version__ == "0.1.0"
 
 
 def test_main_prints_banner(capsys: pytest.CaptureFixture[str]) -> None:
-    ontherecord.main()
-    assert "OnTheRecord backend" in capsys.readouterr().out
+    claudevibecodeapptemplate.main()
+    assert "ClaudeVibeCodeAppTemplate backend" in capsys.readouterr().out

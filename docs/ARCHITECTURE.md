@@ -1,6 +1,6 @@
 # Architecture
 
-OnTheRecord's design decisions. Filled in by ROADMAP F1.2 (product & data design) and kept current as features land.
+ClaudeVibeCodeAppTemplate's design decisions. Filled in by ROADMAP F1.3 (product & data design) and kept current as features land.
 
 ## Overview
 One backend, two clients:
@@ -20,5 +20,5 @@ TBD: entities, relationships, and an entity diagram.
 TBD: first resource list.
 
 ## Design
-- Design system: TBD (ROADMAP F1.3).
+- Design system: TBD (ROADMAP F1.4).
 - Canvases: TBD.
