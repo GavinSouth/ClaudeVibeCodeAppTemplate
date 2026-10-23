@@ -20,3 +20,6 @@ ROADMAP.md tracks feature completion; this file is the context a new session nee
 ### Git history squashed
 - Asked: squash the inherited ControlTower history into one initial commit.
 - Done: `main` rebuilt as a single orphan commit with the same tree. Old history discarded locally (backup branch deleted at user request). The remote still has the old history until a force push.
+
+### CI triggers trimmed
+- User force-pushed the squashed `main` and deleted the remote `development` branch. CI now triggers on `main` only (`.github/workflows/ci.yml`).
