@@ -1,0 +1,29 @@
+# Hooks run the tools pinned in backend/uv.lock (via `uv run`) so local,
+# pre-commit, and CI all use identical versions.
+repos:
+  - repo: local
+    hooks:
+      - id: ruff-check
+        name: ruff check
+        entry: bash -c 'cd backend && uv run ruff check --fix .'
+        language: system
+        files: ^backend/.*\.py$
+        pass_filenames: false
+      - id: ruff-format
+        name: ruff format
+        entry: bash -c 'cd backend && uv run ruff format .'
+        language: system
+        files: ^backend/.*\.py$
+        pass_filenames: false
+      - id: mypy
+        name: mypy
+        entry: bash -c 'cd backend && uv run mypy src'
+        language: system
+        files: ^backend/.*\.py$
+        pass_filenames: false
+      - id: web-lint-typecheck
+        name: web lint + typecheck
+        entry: bash -c 'cd web && npm run --silent lint && npm run --silent typecheck'
+        language: system
+        files: ^web/.*\.(ts|tsx)$
+        pass_filenames: false

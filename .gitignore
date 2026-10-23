@@ -1,0 +1,37 @@
+# --- Secrets (never commit) ---
+.env
+.env.*
+!.env.example
+
+# --- Python ---
+__pycache__/
+*.py[cod]
+.venv/
+*.egg-info/
+build/
+dist/
+
+# --- Tool caches ---
+.mypy_cache/
+.pytest_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# --- Claude Code (personal, machine-local settings) ---
+.claude/settings.local.json
+
+# --- OS / editors ---
+.DS_Store
+.idea/
+.vscode/
+
+# --- App data (local SQLite database) ---
+backend/data/
+
+# --- iOS / Xcode ---
+xcuserdata/
+DerivedData/
+*.xcuserstate
+ios/build/
+.build/
